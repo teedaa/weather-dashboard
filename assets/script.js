@@ -1,7 +1,7 @@
 var city = document.querySelector(".form-control");
 var button = document.querySelector(".btn");
-var currentContainer = document.querySelector("#currentWeather")
-
+var currentContainer = document.querySelector("#currentWeather");
+var today = moment().format("l");
 $(document).ready(function(){
     $(document).on("submit", function (event){
         event.preventDefault();
@@ -13,8 +13,8 @@ $(document).ready(function(){
        .then(function (data){
         console.log(data);
             var cityName = data.name;
-            var cityEl = document.createElement('h1');
-            cityEl.textContent = cityName;
+            var cityEl = document.createElement('h2');
+            cityEl.textContent = (cityName + " (" + today + ")");
 
             var currentTemp = data.main.temp;
             var convertedTemp = ((currentTemp - 273.15) * 1.80 + 32);
