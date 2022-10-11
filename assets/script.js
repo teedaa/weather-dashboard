@@ -12,15 +12,28 @@ $(document).ready(function(){
        })
        .then(function (data){
         console.log(data);
-        for (var i = 0; i < data.length; i++){
-            var temp = document.createElement('p');
-            var wind = document.createElement('p');
-            var humidity = document.createElement('p');
-            temp.textContent = data[i].main.temp;
-            console.log(temp)
-        
+            var cityName = data.name;
+            var cityEl = document.createElement('h1');
+            cityEl.textContent = cityName;
+
+            var currentTemp = data.main.temp;
+            var convertedTemp = ((currentTemp - 273.15) * 1.80 + 32);
+            var tempEl = document.createElement('p')
+            tempEl.textContent =("Temp: "+ convertedTemp.toFixed(2) + "°F");
+
+            var windSpeed = data.wind.speed;
+            var windEl = document.createElement('p');
+            windEl.textContent =(windSpeed); 
+
+            var humidity = data.main.humidity;
+            var humidityEl = document.createElement('p');
+            humidityEl.textContent =("Humidity: " + humidity + "%");
+
+
+            currentContainer.append(cityEl, tempEl, windSpeed, humidityEl);
+
         }
-       })
+       )
     })
 
 });
