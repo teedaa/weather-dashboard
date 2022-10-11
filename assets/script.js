@@ -34,7 +34,8 @@ $(document).ready(function(){
 
         }
        )
-       fetch("https://api.openweathermap.org/data/2.5/forecast?q="+city.value+"&cnt=5&units=imperial&appid=f33477ee6cb130320adcdd14a83733fa")
+    })
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q="+city.value+"&cnt=5&units=imperial&appid=f33477ee6cb130320adcdd14a83733fa")
        .then(function(response){
         return response.json();
        })
@@ -42,6 +43,4 @@ $(document).ready(function(){
         console.log(forecast);
             
        })
-    })
-
 });
