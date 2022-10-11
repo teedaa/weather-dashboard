@@ -12,14 +12,15 @@
     <header class="header">
         <h1>Weather Dashboard</h1>
     </header>
-    <form>
+    <form id="form-submit">
             <div class="form-group row col-3">
-                <label for="inputCity" class="city-input">Search for a City</label>
-                <input type="text" class="form-control" id="inputCity" aria-describedby="emailHelp">
+                <label class="city-input">Search for a City</label>
+                <input type="text" class="form-control" id="cityName" placeholder="City name">
             </div>
-            <button type="submit" class="btn btn-primary row col-3">Search</button>
+            <button type="submit" name="cityForm" class="btn btn-primary row col-3" id="search">Search</button>
       </form>
-    
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32oNMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>    
 <script src="./assets/script.js"></script>    
 </body>
 </html>
