@@ -23,17 +23,27 @@
                     </div>
                     <button type="submit" name="cityForm" class="btn btn-primary" id="search">Search</button>
                 </form>
+                
                 <!-- Search history-->
                 <ul class="list-group">
-                    
+
                 </ul>
             </div>
+
             <!-- Current weather div -->
             <div class="col-sm-8">
-                <div class="row ml-2" id="currentWeather">
+                <div class="row current-weather" id="currentWeather">
+                    <h3 class="city-name" class="current-city" id="currentCity"></h3>
+                    <p>Temperature:<span class="currentW" id="currentTemp"></span></p>
+                    <p>Wind Speed:<span class="currentW" id="currentWind"></span></p>
+                    <p>Humidity<span class="currentW" id="currentHumidity"></span></p>
                 </div>
             </div>
+
             <!--Future Forecast-->
+            <div id="futureWeather">
+
+            </div>
         </div>
     </div>  
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
