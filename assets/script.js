@@ -55,7 +55,8 @@ $(document).ready(function(){
                 console.log(forecast);
                     
                })
-               
+
+   
         }
         )
     })
