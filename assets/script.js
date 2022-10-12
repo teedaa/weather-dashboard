@@ -8,10 +8,10 @@ var currentWind = $("#currentWind");
 var currentHumidity = $("#currentHumidity");
 
 $(document).ready(function(){
-
+//Click Event
     $(document).on("submit", function (event){
         event.preventDefault();
-
+    //API Call for current weather
        fetch("https://api.openweathermap.org/data/2.5/weather?q="+city.value+"&units=imperial&appid=f33477ee6cb130320adcdd14a83733fa")
        .then(function(response){
         return response.json();
@@ -21,32 +21,25 @@ $(document).ready(function(){
             var cityName = data.name;
             var weatherIcon =data.weather[0].icon
             var iconURL="https://openweathermap.org/img/wn/"+weatherIcon+"@2x.png"
+
+            //Populate Current Weather Div
             $(currentCity).html(cityName + " (" + today + ")" + "<img src="+iconURL+">");
         
-
-            var currentTemp = data.main.temp;
-            
-            
-            // var convertedTemp = ((currentTemp - 273.15) * 1.80 + 32);
-            // var tempEl = document.createElement('p')
-            // tempEl.textContent =
+            var currentTemp = data.main.temp;            
             $(currentTemperature).html("Temperature: " + currentTemp.toFixed(2) + "°F");
             
-
-            var windSpeed = data.wind.speed;
-            // var windEl = document.createElement('p');
+            var windSpeed = data.wind.speed;      
             $(currentWind).html("Wind Speed: " + windSpeed + "MPH" ); 
-           
+         
 
-            var humidity = data.main.humidity;
-            // var humidityEl = document.createElement('p');
+            var humidity = data.main.humidity;      
             $(currentHumidity).html("Humidity: " + humidity + "%");
 
-            
-            // currentContainer.append(cityEl, tempEl, windSpeed, humidityEl);
+      
             var lat = data.coord.lat
             var lon = data.coord.lon
 
+            //Second API call for forecast
             fetch("https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&cnt=5&units=imperial&appid=f33477ee6cb130320adcdd14a83733fa")
                .then(function(response){
                 return response.json();
@@ -54,6 +47,7 @@ $(document).ready(function(){
                .then(function(forecast){
                 console.log(forecast);
 
+            //Populate Forecast Elements
             var weatherIcon =forecast.list[0].weather[0].icon
             var newURL="https://openweathermap.org/img/wn/"+weatherIcon+"@2x.png"
             $("#futureDate1").html(moment().add(1, "day").format("l") + "<img src="+ newURL+ ">"); 
@@ -94,4 +88,3 @@ $(document).ready(function(){
     })
 
 });
-// `${weatherApiRootUrl}/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${weatherApiKey}`;
