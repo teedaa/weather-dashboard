@@ -47,16 +47,33 @@ $(document).ready(function(){
             var lat = data.coord.lat
             var lon = data.coord.lon
 
-            fetch("https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&units=imperial&appid=f33477ee6cb130320adcdd14a83733fa")
+            fetch("https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&cnt=5&units=imperial&appid=f33477ee6cb130320adcdd14a83733fa")
                .then(function(response){
                 return response.json();
                })
                .then(function(forecast){
                 console.log(forecast);
-                    
-               })
 
-   
+            $("#futureDate1").html(moment().add(1, "day").format("l")); 
+            $("#futureTemp1").html("Temperature: " +forecast.list[0].main.temp + "°F");
+            $("#futureWind1").html("Wind Speed: " + forecast.list[0].wind.speed + "MPH");
+            $("#futureHumidity1").html("Humidity: " + forecast.list[0].main.humidity +"%");
+               })
+               
+
+
+            //    for (i=0;i<5;i++){
+            //     var futureDate= new Date((response.list[((i+1)*8)-1].dt)*1000).toLocaleDateString();
+            //     var weatherIcon= response.list[((i+1)*8)-1].weather[0].icon;
+            //     var iconURL="https://openweathermap.org/img/wn/"+weatherIcon+".png";
+            //     var futureTemp= response.list[((i+1)*8)-1].main.temp;
+            //     var futureHumidity= response.list[((i+1)*8)-1].main.humidity;
+            
+            //     $("#futureDate"+i).html(date);
+            //     $("#futureImg"+i).html("<img src="+iconURL+">");
+            //     $("#futureTemp"+i).html(temp+"°F");
+            //     $("#futureHumidity"+i).html(humidity+"%");
+            // }
         }
         )
     })
