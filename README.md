@@ -13,11 +13,11 @@ A weather dashboard that gives the current weather conditions of selected city, 
 * Moment.js
 ## Usage
 ![Screenshot](./assets/site.png)
-[Live Link]("https://teedaa.github.io/weather-dashboard")
+[Live Link](https://teedaa.github.io/weather-dashboard)
 ## Credits
 Pengteda Cheng 
 * ![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-    * [Github]("https://github.com/teedaa")
+    * [Github](https://github.com/teedaa)
 * ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
-    * [LinkedIn]("https://linkedin.com/in/pengteda-cheng")
+    * [LinkedIn](https://linkedin.com/in/pengteda-cheng)
 * [Markdown Badges](https://github.com/Ileriayo/markdown-badges)
