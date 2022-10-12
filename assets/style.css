@@ -8,3 +8,13 @@
     font-size: 25px;
     font-weight: bold;
 }
+
+.current-weather{
+    border: solid black;
+}
+
+.currentW{
+    display:flex;
+    flex-direction: column;
+    padding-right: 5%;
+}
