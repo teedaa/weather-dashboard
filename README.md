@@ -16,8 +16,8 @@ A weather dashboard that gives the current weather conditions of selected city, 
 [Live Link]("https://teedaa.github.io/weather-dashboard")
 ## Credits
 Pengteda Cheng 
-* [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)]("https://github.com/teedaa")
-
-
-* [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)]("https://linkedin.com/in/pengteda-cheng")
+* ![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+    * [Github]("https://github.com/teedaa")
+* ![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)
+    * [LinkedIn]("https://linkedin.com/in/pengteda-cheng")
 * [Markdown Badges](https://github.com/Ileriayo/markdown-badges)
